@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+}
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+body, main, .header, .box-container, .box {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    min-height: 100vh;
+    gap: 2em;
+}
+main {
+    gap: 3em;
+}
+.header {
+    width: 35em;
+    text-align: center;
+    color: var(--Very-Dark-Blue);
+}
+.red {
+    font-size: 2.3em;
+}
+.pbt {
+    font-size: 2.3em;
+    font-weight: 600;
+}
+.box-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    gap: 2em;
+    max-height: 45em;
+}
+.box {
+    padding: 2em;
+    border-radius: 0.3em;
+    box-shadow: 0 0.5em 1em 0.2em hsl(234, 12%, 34%, 0.2);
+    width: 23em;
+    gap: 1em;
+}
+.box h3 {
+    align-self: flex-start;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.box img {
+    align-self: flex-end;
+}
+.box p {
+    font-weight: 200;
+    font-size: 0.9em;
+}
+.box1, .box4 {
+    margin: 10em 0;
+}
+.box1 {
+    border-top: 0.3em solid var(--Cyan);
+}
+.box2 {
+    border-top: 0.3em solid var(--Red);
+}
+.box3 {
+    border-top: 0.3em solid var(--Orange);
+}
+.box4 {
+    border-top: 0.3em solid var(--Blue);
+}
+.attribution { 
+    text-align: center; 
+    color: var(--Very-Dark-Blue);
+}
+.attribution:hover {
+    animation: bob 0.5s ease-out forwards;
+}
+.attribution a { 
+    color: var(--Red);
+    text-decoration: none;
+}
+@keyframes bob {
+    100% {
+        scale: 1.5;
+        padding: 1em;
+        border: 0.5em solid var(--Cyan);
+        border-radius: 1em;
+        box-shadow: 0.5em 0.5em 0.5em var(--Orange);
+    }
+}
+@media screen and (width < 1035px) {
+    .box-container {
+        max-height: inherit;
+    }
+    .box1, .box4 {
+    margin: 0;
+}
+}
